@@ -5,6 +5,8 @@ author: Matouš Segéň
 email: matous.segen@gmail.com
 """
 
+from sys import exit
+
 # variable initialization
 TEXTS = [
     '''Situated about 10 miles west of Kemmerer,
@@ -42,3 +44,13 @@ credentials = {"bob": "123",
 username = input("username:").strip().lower()
 password = input("password:")
 line = "-" * 40
+
+
+for loop_name, loop_password in credentials.items():
+    if username == loop_name and password == loop_password:
+        print(line)
+        print(f"Welcome to the app, {username}")
+        break
+else:
+    print("unregistered user, terminating the program..")
+    exit()
