@@ -58,3 +58,16 @@ else:
 # continue program
 print("We have 3 texts to be analyzed.")
 print(line)
+
+# user input handling
+try:
+    text_num = int(input("Enter a number btw. 1 and 3 to select: "))
+    text_num -= 1   # set the range from [1, 3] to [0, 2] for easier use
+
+except ValueError:
+    print("Wrong input, terminating the program..")
+    exit()
+
+if int(text_num) not in range(3):
+    print("Number is not in range, terminating the program..")
+    exit()
