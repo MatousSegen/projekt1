@@ -71,3 +71,38 @@ except ValueError:
 if int(text_num) not in range(3):
     print("Number is not in range, terminating the program..")
     exit()
+
+# text analysis and statistics
+word_count = 0
+word_title = 0
+word_lower = 0
+word_upper = 0
+number_count = 0
+number_sum = 0
+
+words_lengths = {}  # Stores occurrences of each word length
+
+text_analyzed = TEXTS[text_num].split()
+
+for item in text_analyzed:
+    word = item.translate(str.maketrans("", "", ",.-"))
+    word_count += 1
+
+    if word.isdigit():
+        number_count += 1
+        number_sum += int(word)
+
+    elif word.isalpha():
+        if word.istitle():
+            word_title += 1
+    
+        if word.isupper():
+            word_upper += 1
+    
+        if word.islower():
+            word_lower += 1
+        
+        word_len = len(word)
+        words_lengths[word_len] = words_lengths.get(word_len, 0) + 1
+
+sorted_words_lengths = dict(sorted(words_lengths.items())) 
