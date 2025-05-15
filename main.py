@@ -41,11 +41,11 @@ credentials = {"bob": "123",
                "mike": "password123",
                "liz": "pass123"}
 
-username = input("username:").strip().lower()
+username = input("username:").strip().lower()   # handles uppercase letters and whitespaces
 password = input("password:")
 line = "-" * 40
 
-
+# credentials verification
 for loop_name, loop_password in credentials.items():
     if username == loop_name and password == loop_password:
         print(line)
