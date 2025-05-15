@@ -54,3 +54,7 @@ for loop_name, loop_password in credentials.items():
 else:
     print("unregistered user, terminating the program..")
     exit()
+
+# continue program
+print("We have 3 texts to be analyzed.")
+print(line)
