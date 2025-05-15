@@ -106,3 +106,19 @@ for item in text_analyzed:
         words_lengths[word_len] = words_lengths.get(word_len, 0) + 1
 
 sorted_words_lengths = dict(sorted(words_lengths.items())) 
+
+# formatted output of the results
+print(f"""{line}
+There are {word_count} words in the selected text.
+There are {word_title} titlecase words.
+There are {word_upper} uppercase words.
+There are {word_lower} lowercase words.
+There are {number_count} numeric strings.
+The sum of all the numbers {number_sum}
+{line}
+LEN|  OCCURENCES  |NR.
+{line}""")
+
+for dict_key, dict_value in sorted_words_lengths.items():
+    stars = "*" * dict_value
+    print(f"{dict_key:3}|{stars.ljust(20)}|{dict_value}")
