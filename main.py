@@ -5,7 +5,7 @@ author: Matouš Segéň
 email: matous.segen@gmail.com
 """
 
-
+# variable initialization
 TEXTS = [
     '''Situated about 10 miles west of Kemmerer,
     Fossil Butte is a ruggedly impressive
