@@ -12,5 +12,5 @@ Bash
 python analyzer.py
 ```
 ## Přihlášení
-- **User:** bob | **Pass:** 123
-- **User:** ann | **Pass:** pass123
+- **User:** bob | **Password:** 123
+- **User:** ann | **Password:** pass123
